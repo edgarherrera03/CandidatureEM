@@ -134,6 +134,10 @@ header {
 			width: 35vh;
 			height: 35vh;
 		}
+		@include xs {
+			width: 25vw;
+			height: 25vw;
+		}
 	}
 	p {
 		margin: 1em 2em;
@@ -227,7 +231,8 @@ header {
 	height: 150vh;
 	margin-top: 200px;
 	@include md {
-		margin-top: 5em;
+		margin-top: 200px;
+		height: 70vh;
 		h2 {
 			margin: 1em 0 0.4em 0;
 		}

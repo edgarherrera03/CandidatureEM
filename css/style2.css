@@ -255,6 +255,12 @@ header .menu a:hover {
     height: 35vh;
   }
 }
+@media (max-width: 480px) {
+  .personnel .picture {
+    width: 25vw;
+    height: 25vw;
+  }
+}
 .personnel p {
   margin: 1em 2em;
 }
@@ -363,7 +369,8 @@ header .menu a:hover {
 }
 @media (max-width: 979px) {
   .interets {
-    margin-top: 5em;
+    margin-top: 200px;
+    height: 70vh;
   }
   .interets h2 {
     margin: 1em 0 0.4em 0;
