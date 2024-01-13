@@ -257,8 +257,8 @@ header .menu a:hover {
 }
 @media (max-width: 480px) {
   .personnel .picture {
-    width: 25vw;
-    height: 25vw;
+    width: 55vw;
+    height: 55vw;
   }
 }
 .personnel p {
