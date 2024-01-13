@@ -67,6 +67,10 @@ header {
 		@include sm {
 			padding: 1rem 1.5rem;
 		}
+		@include xs {
+			width: 8vh;
+			height: 8vh;
+		}
 		img {
 			border-radius: 50%;
 		}
@@ -114,6 +118,7 @@ header {
 	height: 100vh;
 	display: flex;
 	flex-flow: column;
+	margin-top: 2em;
 	@include xs {
 		height: 50vh;
 		margin-top: 2em;
@@ -220,7 +225,7 @@ header {
 
 .interets {
 	height: 150vh;
-	margin-top: 5em;
+	margin-top: 200px;
 	@include md {
 		margin-top: 5em;
 		h2 {
@@ -327,6 +332,12 @@ header {
 	flex-flow: column;
 	h1 {
 		font-size: 4em;
+		@include md {
+			font-size: 3em;
+		}
+		@include xs {
+			font-size: 2em;
+		}
 	}
 	@include md {
 		height: 20vh;
@@ -337,7 +348,7 @@ footer {
 	display: flex;
 	flex-flow: column;
 	text-align: center;
-	height: 100px;
+	height: 60px;
 	margin: 0 0.005em;
 	background: var(--footer);
 	justify-content: center;
