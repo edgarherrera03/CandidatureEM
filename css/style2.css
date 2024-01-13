@@ -353,7 +353,9 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .parcours .parcours-container .text-parcours {
     height: auto;
-    padding: 0 1.8em;
+  }
+  .parcours .parcours-container .text-parcours p {
+    margin: 1em 2em;
   }
 }
 @media (max-width: 767px) {
@@ -382,6 +384,11 @@ header .menu a:hover {
 @media (max-width: 979px) {
   .interets h1 {
     margin-bottom: 0.5em;
+  }
+}
+@media (max-width: 480px) {
+  .interets {
+    margin-bottom: 100px;
   }
 }
 .interets .interets-container {
@@ -415,7 +422,7 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .interets .interets-container .finance {
     margin-bottom: 2em;
-    padding: 0 0.8em;
+    padding: 0 1em;
   }
 }
 .interets .interets-container .finance .finance-photo {
@@ -433,6 +440,7 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .interets .interets-container .entreprise {
     margin-bottom: 2em;
+    padding: 0 1em;
   }
 }
 .interets .interets-container .entreprise .entreprise-photo {
@@ -457,7 +465,7 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .candidature {
     height: 35vh;
-    margin-top: 0;
+    margin: 100px 0;
   }
 }
 @media (max-width: 979px) {
