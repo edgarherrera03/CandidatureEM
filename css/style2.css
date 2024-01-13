@@ -115,6 +115,11 @@ h2 {
 p {
   font-size: 2vw;
 }
+@media (max-width: 480px) {
+  p {
+    font-size: 3vw;
+  }
+}
 
 .general {
   text-align: center;
@@ -241,6 +246,7 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .EMLYON {
     height: 25vh;
+    margin: 0 0 2em 0;
   }
 }
 .EMLYON p {
@@ -352,18 +358,23 @@ header .menu a:hover {
   .interets .interets-container {
     height: fit-content;
   }
+  .interets .interets-container h2 {
+    font-size: 4vw;
+    margin-bottom: 1.5em;
+  }
 }
 .interets .interets-container .finance {
   flex: 1;
   padding: 0 2em;
 }
+@media (max-width: 480px) {
+  .interets .interets-container .finance {
+    margin-bottom: 2em;
+    padding: 0 0.8em;
+  }
+}
 .interets .interets-container .finance .finance-photo {
   padding: 2em 4em;
-}
-@media (max-width: 480px) {
-  .interets .interets-container .finance .finance-photo {
-    padding: 1em 2em;
-  }
 }
 @media (max-width: 767px) {
   .interets .interets-container .finance .finance-photo {
@@ -373,6 +384,12 @@ header .menu a:hover {
 .interets .interets-container .entreprise {
   flex: 1;
   padding: 0 2em;
+}
+@media (max-width: 480px) {
+  .interets .interets-container .entreprise {
+    margin-bottom: 2em;
+    padding: 0 0.8em;
+  }
 }
 .interets .interets-container .entreprise .entreprise-photo {
   padding: 2em 4em;
@@ -398,7 +415,8 @@ header .menu a:hover {
 }
 @media (max-width: 480px) {
   .candidature {
-    height: 50vh;
+    height: 35vh;
+    margin-top: 0;
   }
 }
 .candidature .qualities {
@@ -416,6 +434,11 @@ header .menu a:hover {
   font-size: 1em;
   padding: 1rem;
 }
+@media (max-width: 480px) {
+  .candidature .qualities {
+    margin-top: 0;
+  }
+}
 
 .remerciements {
   height: 50vh;
@@ -425,7 +448,8 @@ header .menu a:hover {
 }
 @media (max-width: 480px) {
   .remerciements {
-    height: 25vh;
+    height: 20vh;
+    margin: 0 2em;
   }
 }
 

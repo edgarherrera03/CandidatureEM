@@ -25,6 +25,9 @@ h2 {
 }
 p {
 	font-size: 2vw;
+	@include xs {
+		font-size: 3vw;
+	}
 }
 
 .general {
@@ -129,6 +132,7 @@ header {
 	justify-content: center;
 	@include xs {
 		height: 25vh;
+		margin: 0 0 2em 0;
 	}
 	p {
 		margin: 1em 2em;
@@ -223,15 +227,21 @@ header {
 		}
 		@include xs {
 			height: fit-content;
+			h2 {
+				font-size: 4vw;
+				margin-bottom: 1.5em;
+			}
 		}
 		.finance {
 			flex: 1;
 			padding: 0 2em;
+			@include xs {
+				margin-bottom: 2em;
+				padding: 0 0.8em;
+			}
 			.finance-photo {
 				padding: 2em 4em;
-				@include xs {
-					padding: 1em 2em;
-				}
+
 				@include sm {
 					padding: 0;
 				}
@@ -240,6 +250,10 @@ header {
 		.entreprise {
 			flex: 1;
 			padding: 0 2em;
+			@include xs {
+				margin-bottom: 2em;
+				padding: 0 0.8em;
+			}
 			.entreprise-photo {
 				padding: 2em 4em;
 				@include xs {
@@ -261,7 +275,8 @@ header {
 		margin: 3em 2em;
 	}
 	@include xs {
-		height: 50vh;
+		height: 35vh;
+		margin-top: 0;
 	}
 	.qualities {
 		display: grid;
@@ -277,6 +292,9 @@ header {
 			font-size: 1em;
 			padding: 1rem;
 		}
+		@include xs {
+			margin-top: 0;
+		}
 	}
 }
 
@@ -286,7 +304,8 @@ header {
 	display: flex;
 	flex-flow: column;
 	@include xs {
-		height: 25vh;
+		height: 20vh;
+		margin: 0 2em;
 	}
 }
 footer {
