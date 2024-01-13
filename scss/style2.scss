@@ -15,7 +15,7 @@
 }
 
 h1 {
-	font-size: 3.5em;
+	font-size: 3em;
 	@include md {
 		font-size: 3em;
 	}
@@ -25,9 +25,9 @@ h1 {
 }
 h2 {
 	font-weight: 500;
-	font-size: 3vw;
+	font-size: 2em;
 	@include xs {
-		font-size: 4vw;
+		font-size: 1em;
 	}
 }
 p {
@@ -288,7 +288,7 @@ header {
 	display: flex;
 	flex-flow: column;
 	min-height: 100%;
-	margin-top: 50px;
+	margin: 200px 0;
 	p {
 		margin: 3em 2em;
 	}
@@ -325,6 +325,9 @@ header {
 	margin: 0 4em;
 	display: flex;
 	flex-flow: column;
+	h1 {
+		font-size: 4em;
+	}
 	@include md {
 		height: 20vh;
 		margin: 0 2em;
