@@ -1,0 +1,387 @@
+@use "base" as *;
+@use "classes" as *;
+@use "animations" as *;
+@use "media_queries" as *;
+
+.flex-container {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	max-width: 100vw;
+	background: var(--dark-background);
+	color: var(--text-dark);
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	font-size: 5vw;
+	@include xl {
+		font-size: 4vw;
+	}
+}
+h2 {
+	font-weight: 500;
+	font-size: 3vw;
+}
+p {
+	font-size: 2vw;
+}
+
+.general {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3vw;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 14vh;
+	background: var(--background);
+	align-items: center;
+	font-family: "Cabin", sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	color: var(--text);
+	@include xs {
+		flex-flow: column;
+		height: 100%;
+	}
+	.picture {
+		width: 10vh;
+		height: 10vh;
+		padding: 3rem 8rem;
+		@include md {
+			padding: 2rem 4rem;
+		}
+		@include sm {
+			padding: 1rem 1.5rem;
+		}
+		img {
+			border-radius: 50%;
+		}
+	}
+	.Nom {
+		p {
+			font-size: 2em;
+			@include md {
+				font-size: 1.2em;
+			}
+			@include xs {
+				font-size: 4vw;
+			}
+			@include sm {
+				font-size: 3vw;
+			}
+		}
+	}
+	.menu {
+		display: flex;
+		width: 20vw;
+		justify-content: space-around;
+		a {
+			margin: 1em;
+			&:hover {
+				color: var(--dark-background);
+			}
+		}
+		@include md {
+			width: 25vw;
+		}
+		@include xs {
+			flex-flow: column;
+			width: 100%;
+			align-items: center;
+		}
+		@include sm {
+			width: 30vw;
+			font-size: small;
+		}
+	}
+}
+
+.personnel {
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	@include xs {
+		height: 50vh;
+	}
+	.picture {
+		width: 35vw;
+		height: 35vw;
+		padding: 3rem 8rem;
+		@include md {
+			width: 45vw;
+			height: 45vw;
+		}
+	}
+	p {
+		margin: 1em 2em;
+	}
+}
+.EMLYON {
+	display: flex;
+	flex-flow: column;
+	height: 100vh;
+	justify-content: center;
+	@include xs {
+		height: 50vh;
+	}
+	p {
+		margin: 1em 2em;
+	}
+}
+
+.parcours {
+	display: flex;
+	flex-flow: column;
+	max-width: 100%;
+	height: 200vh;
+	@include xs {
+		height: auto;
+	}
+	.parcours-container {
+		display: flex;
+		justify-content: space-between;
+		max-height: 50vw;
+		margin-top: 1.5em;
+		@include xs {
+			display: grid;
+			grid:
+				"text-parcours" auto
+				"photo-parcours" auto
+				/ auto;
+			max-height: fit-content;
+		}
+		.photo-parcours {
+			grid-area: photo-parcours;
+			flex: 1;
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-template-rows: auto auto;
+			padding: 2rem 5rem;
+			width: 45vw;
+			@include xs {
+				width: 80vw;
+				height: 80vw;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		.text-parcours {
+			grid-area: text-parcours;
+			display: flex;
+			flex-flow: column;
+			flex: 1;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			margin: 0 2em;
+			@include md {
+				margin: 1em 2em;
+			}
+			@include xs {
+				height: auto;
+			}
+			@include sm {
+				margin: 0 1em;
+			}
+		}
+	}
+}
+
+.interets {
+	@include xs {
+		margin-top: 5em;
+		h2 {
+			margin: 1em 0 0.4em 0;
+		}
+	}
+	h1 {
+		margin-bottom: 1.5em;
+		@include xs {
+			margin-bottom: 0.5em;
+		}
+	}
+	.interets-container {
+		display: flex;
+		margin: 2em 1em;
+		height: 100vh;
+		@include xs {
+			flex-flow: column;
+			height: fit-content;
+		}
+		@include xs {
+			height: fit-content;
+		}
+		.finance {
+			flex: 1;
+			padding: 0 2em;
+			.finance-photo {
+				padding: 2em 4em;
+				@include xs {
+					padding: 1em 2em;
+				}
+				@include sm {
+					padding: 0;
+				}
+			}
+		}
+		.entreprise {
+			flex: 1;
+			padding: 0 2em;
+			.entreprise-photo {
+				padding: 2em 4em;
+				@include xs {
+					padding: 1em 2em;
+				}
+				@include sm {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+
+.candidature {
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+	p {
+		margin: 3em 2em;
+	}
+	.qualities {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		width: 100%;
+		margin-top: 5vh;
+		p {
+			margin: 1em;
+		}
+		i {
+			color: #b0a84c;
+			font-size: 1em;
+			padding: 1rem;
+		}
+	}
+}
+
+.remerciements {
+	height: 50vh;
+	margin: 0 4em;
+}
+footer {
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+	height: 100px;
+	margin: 0 0.005em;
+	background: var(--footer);
+	justify-content: center;
+	align-content: center;
+	p {
+		font-size: 1.2em;
+		color: var(--text);
+	}
+	@include sm {
+		height: 50px;
+		p {
+			font-size: 2vw;
+		}
+	}
+}
+
+.photo:nth-child(2) {
+	transition-delay: 200ms;
+}
+.photo:nth-child(3) {
+	transition-delay: 400ms;
+}
+.photo:nth-child(4) {
+	transition-delay: 600ms;
+}
+
+// Animation slide
+.hidden-slide {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1s;
+}
+
+.show-slide {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+// Animation slide-left
+.hidden-slide-left {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(100%);
+	transition: all 1s;
+}
+
+.show-slide-left {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+// Animation emerge
+
+.hidden-emerge {
+	opacity: 0;
+	filter: blur(5px);
+	transition: all 1.5s;
+}
+
+.show-emerge {
+	opacity: 1;
+	filter: blur(0);
+}
+
+// Animation slidein
+
+.hidden-slidein {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.show-slidein {
+	opacity: 1;
+	animation-duration: 1.5s;
+	animation-name: slidein;
+}
+
+//Animation slidein-left
+.hidden-slidein-left {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+}
+.show-slidein-left {
+	opacity: 1;
+	animation-duration: 1.5s;
+	animation-name: slidein;
+}
+
+// Animation up
+
+.hidden-up {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateY(100%);
+	transition: all 1s;
+}
+
+.show-up {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+}

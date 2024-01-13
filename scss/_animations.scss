@@ -1,0 +1,39 @@
+@keyframes complete-80 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 80%;
+	}
+}
+
+@keyframes complete-50 {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 50%;
+	}
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 100%;
+		width: 200%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}
+
+@keyframes slidein-left {
+	from {
+		margin-right: 100%;
+		width: 200%;
+	}
+	to {
+		margin-left: 0%;
+		width: 100%;
+	}
+}

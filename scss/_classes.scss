@@ -1,0 +1,16 @@
+.title {
+	&-small {
+		letter-spacing: 0.2rem;
+		font-size: 1.7rem;
+	}
+}
+
+.text {
+	&-primary {
+		color: var(--primary);
+	}
+}
+
+.rouge {
+	color: rgb(226, 81, 81);
+}
