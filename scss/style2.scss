@@ -14,9 +14,12 @@
 }
 
 h1 {
-	font-size: 4vw;
+	font-size: 4em;
 	@include md {
-		font-size: 5vw;
+		font-size: 3em;
+	}
+	@include xs {
+		font-size: 2em;
 	}
 }
 h2 {
@@ -112,18 +115,18 @@ header {
 	flex-flow: column;
 	@include xs {
 		height: 50vh;
-		margin-top: 1em;
+		margin-top: 2em;
 	}
 	@include md {
 		height: 60vh;
 	}
 	.picture {
-		width: 35vw;
-		height: 35vw;
+		width: 50vh;
+		height: 50vh;
 		padding: 3rem 8rem;
 		@include md {
-			width: 45vw;
-			height: 45vw;
+			width: 35vh;
+			height: 35vh;
 		}
 	}
 	p {
@@ -215,6 +218,7 @@ header {
 }
 
 .interets {
+	height: 150vh;
 	@include md {
 		margin-top: 5em;
 		h2 {
@@ -227,6 +231,7 @@ header {
 			margin-bottom: 0.5em;
 		}
 	}
+	min-height: 900px;
 	.interets-container {
 		display: flex;
 		margin: 2em 1em;
@@ -280,6 +285,8 @@ header {
 	height: 100vh;
 	display: flex;
 	flex-flow: column;
+	min-height: 100%;
+	margin-top: 50px;
 	p {
 		margin: 3em 2em;
 	}
