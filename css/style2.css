@@ -213,7 +213,8 @@ header .menu a:hover {
 }
 @media (max-width: 480px) {
   .personnel {
-    height: 50vh;
+    height: 40vh;
+    margin-top: 0;
   }
 }
 .personnel .picture {
@@ -239,7 +240,7 @@ header .menu a:hover {
 }
 @media (max-width: 480px) {
   .EMLYON {
-    height: 50vh;
+    height: 25vh;
   }
 }
 .EMLYON p {
@@ -255,6 +256,9 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .parcours {
     height: auto;
+  }
+  .parcours h1 {
+    margin: 0 0;
   }
 }
 .parcours .parcours-container {
@@ -308,6 +312,7 @@ header .menu a:hover {
 @media (max-width: 480px) {
   .parcours .parcours-container .text-parcours {
     height: auto;
+    padding: 0 1.8em;
   }
 }
 @media (max-width: 767px) {
@@ -391,6 +396,11 @@ header .menu a:hover {
 .candidature p {
   margin: 3em 2em;
 }
+@media (max-width: 480px) {
+  .candidature {
+    height: 50vh;
+  }
+}
 .candidature .qualities {
   display: grid;
   grid-template-columns: auto auto;
@@ -410,6 +420,13 @@ header .menu a:hover {
 .remerciements {
   height: 50vh;
   margin: 0 4em;
+  display: flex;
+  flex-flow: column;
+}
+@media (max-width: 480px) {
+  .remerciements {
+    height: 25vh;
+  }
 }
 
 footer {

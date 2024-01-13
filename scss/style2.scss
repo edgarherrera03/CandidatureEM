@@ -106,7 +106,8 @@ header {
 	display: flex;
 	flex-flow: column;
 	@include xs {
-		height: 50vh;
+		height: 40vh;
+		margin-top: 0;
 	}
 	.picture {
 		width: 35vw;
@@ -127,7 +128,7 @@ header {
 	height: 100vh;
 	justify-content: center;
 	@include xs {
-		height: 50vh;
+		height: 25vh;
 	}
 	p {
 		margin: 1em 2em;
@@ -141,6 +142,9 @@ header {
 	height: 200vh;
 	@include xs {
 		height: auto;
+		h1 {
+			margin: 0 0;
+		}
 	}
 	.parcours-container {
 		display: flex;
@@ -187,6 +191,7 @@ header {
 			}
 			@include xs {
 				height: auto;
+				padding: 0 1.8em;
 			}
 			@include sm {
 				margin: 0 1em;
@@ -255,6 +260,9 @@ header {
 	p {
 		margin: 3em 2em;
 	}
+	@include xs {
+		height: 50vh;
+	}
 	.qualities {
 		display: grid;
 		grid-template-columns: auto auto;
@@ -275,6 +283,11 @@ header {
 .remerciements {
 	height: 50vh;
 	margin: 0 4em;
+	display: flex;
+	flex-flow: column;
+	@include xs {
+		height: 25vh;
+	}
 }
 footer {
 	display: flex;
