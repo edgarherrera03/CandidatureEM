@@ -132,6 +132,7 @@ header {
 	display: flex;
 	flex-flow: column;
 	margin-top: 2em;
+	z-index: 1;
 	@include xs {
 		height: 50vh;
 		margin-top: 2em;
@@ -186,6 +187,7 @@ header {
 		}
 		margin: 0;
 	}
+	z-index: 1;
 	.parcours-container {
 		display: flex;
 		justify-content: space-between;
@@ -254,6 +256,7 @@ header {
 .interets {
 	height: 150vh;
 	margin-top: 200px;
+	z-index: 1;
 	@include md {
 		margin-top: 200px;
 		height: 70vh;
@@ -327,6 +330,7 @@ header {
 	flex-flow: column;
 	min-height: 100%;
 	margin: 200px 0;
+	z-index: 1;
 	p {
 		margin: 3em 2em;
 	}
