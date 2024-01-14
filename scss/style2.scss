@@ -459,23 +459,37 @@ footer {
 .hidden-slidein {
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
+	@include xs {
+		transition: all 1s;
+	}
 }
 
 .show-slidein {
 	opacity: 1;
 	animation-duration: 1.5s;
 	animation-name: slidein;
+	@include xs {
+		animation-name: slide;
+		animation-duration: 1s;
+	}
 }
 
 //Animation slidein-left
 .hidden-slidein-left {
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
+	@include xs {
+		transition: all 1s;
+	}
 }
 .show-slidein-left {
 	opacity: 1;
 	animation-duration: 1.5s;
 	animation-name: slidein;
+	@include xs {
+		animation-name: slide-left;
+		animation-duration: 1s;
+	}
 }
 
 // Animation up
@@ -485,10 +499,16 @@ footer {
 	filter: blur(5px);
 	transform: translateY(100%);
 	transition: all 1s;
+	@include xs {
+		transform: none;
+	}
 }
 
 .show-up {
 	opacity: 1;
 	filter: blur(0);
 	transform: translateY(0);
+	@include xs {
+		transform: none;
+	}
 }

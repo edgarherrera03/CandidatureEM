@@ -49,6 +49,11 @@ img {
   color: rgb(226, 81, 81);
 }
 
+.gras {
+  font-weight: 500;
+  color: white;
+}
+
 @keyframes complete-80 {
   0% {
     width: 0%;
@@ -83,6 +88,30 @@ img {
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
   }
 }
 /* Landscape phones and down */
@@ -628,22 +657,44 @@ footer p {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+@media (max-width: 480px) {
+  .hidden-slidein {
+    transition: all 1s;
+  }
+}
 
 .show-slidein {
   opacity: 1;
   animation-duration: 1.5s;
   animation-name: slidein;
 }
+@media (max-width: 480px) {
+  .show-slidein {
+    animation-name: slide;
+    animation-duration: 1s;
+  }
+}
 
 .hidden-slidein-left {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+}
+@media (max-width: 480px) {
+  .hidden-slidein-left {
+    transition: all 1s;
+  }
 }
 
 .show-slidein-left {
   opacity: 1;
   animation-duration: 1.5s;
   animation-name: slidein;
+}
+@media (max-width: 480px) {
+  .show-slidein-left {
+    animation-name: slide-left;
+    animation-duration: 1s;
+  }
 }
 
 .hidden-up {
@@ -652,11 +703,21 @@ footer p {
   transform: translateY(100%);
   transition: all 1s;
 }
+@media (max-width: 480px) {
+  .hidden-up {
+    transform: none;
+  }
+}
 
 .show-up {
   opacity: 1;
   filter: blur(0);
   transform: translateY(0);
+}
+@media (max-width: 480px) {
+  .show-up {
+    transform: none;
+  }
 }
 
 /*# sourceMappingURL=style2.css.map */

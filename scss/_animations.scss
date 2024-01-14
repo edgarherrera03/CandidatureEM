@@ -37,3 +37,29 @@
 		width: 100%;
 	}
 }
+
+@keyframes slide {
+	0% {
+		opacity: 0;
+		filter: blur(5px);
+		transform: translateX(-100%);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		filter: blur(5px);
+		transform: translateX(100%);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+}

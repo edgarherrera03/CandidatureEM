@@ -48,6 +48,11 @@ img {
   color: rgb(226, 81, 81);
 }
 
+.gras {
+  font-weight: 500;
+  color: white;
+}
+
 @keyframes complete-80 {
   0% {
     width: 0%;
@@ -82,6 +87,30 @@ img {
   to {
     margin-left: 0%;
     width: 100%;
+  }
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
   }
 }
 /* Landscape phones and down */
