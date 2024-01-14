@@ -9,11 +9,23 @@
 	justify-content: space-between;
 	height: 100%;
 	max-width: 100vw;
-	background: var(--dark-background);
+	background-image: url("../img/fond.jpg");
+	background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la page */
+	background-attachment: fixed; /* Fixe l'image en arrière-plan */
+	background-position: center;
 	color: var(--text-dark);
 	font-family: "Roboto", sans-serif;
 }
 
+.flex-container::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
 h1 {
 	font-size: 3em;
 	@include md {
@@ -53,6 +65,7 @@ header {
 	font-weight: 400;
 	letter-spacing: 0.1em;
 	color: var(--text);
+	z-index: 1;
 	@include xs {
 		flex-flow: column;
 		height: 100%;
@@ -213,6 +226,15 @@ header {
 			justify-content: center;
 			align-items: center;
 			margin: 0 2em;
+			color: var(--text-dark);
+			p {
+				font-size: 2vw;
+				@include xs {
+					font-size: 3vw;
+				}
+				z-index: 1;
+			}
+
 			@include md {
 				margin: 1em 2em;
 			}
@@ -341,6 +363,7 @@ header {
 	margin: 0 4em;
 	display: flex;
 	flex-flow: column;
+	z-index: 1;
 	h1 {
 		font-size: 4em;
 		@include md {
@@ -364,6 +387,7 @@ footer {
 	background: var(--footer);
 	justify-content: center;
 	align-content: center;
+	z-index: 1;
 	p {
 		font-size: 1.2em;
 		color: var(--text);
