@@ -124,7 +124,7 @@ img {
   justify-content: space-between;
   height: 100%;
   max-width: 100vw;
-  background-image: url("../img/fond.jpg");
+  background-image: url("../img/Campus.jpg");
   background-size: cover; /* Ajuste la taille de l'image pour couvrir toute la page */
   background-attachment: fixed; /* Fixe l'image en arrière-plan */
   background-position: center;
